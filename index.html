@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f5f3ee">
+  <meta name="description" content="Find your next great read with a quick book search.">
+  <title>Goodreadshelf — Find your next read</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="#top" aria-label="Goodreadshelf home"><span class="brand-mark">G</span> goodreadshelf</a>
+    <a class="top-link" href="#about">About</a>
+  </header>
+
+  <main id="top">
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="hero-copy">
+        <p class="eyebrow"><span></span> YOUR NEXT CHAPTER STARTS HERE</p>
+        <h1 id="hero-title">Find a book<br>that <em>finds you.</em></h1>
+        <p class="intro">Search millions of books and discover the one you can’t put down.</p>
+        <form class="search-form" id="search-form" role="search">
+          <label class="sr-only" for="query">Search by title, author, or keyword</label>
+          <span class="search-icon" aria-hidden="true">⌕</span>
+          <input id="query" name="q" type="search" placeholder="Title, author, or keyword..." autocomplete="off" required>
+          <button type="submit">Search <span aria-hidden="true">→</span></button>
+        </form>
+        <p class="search-hint">Try “Ursula Le Guin” or “the secret garden”</p>
+      </div>
+      <div class="hero-art" aria-hidden="true">
+        <div class="sun"></div><div class="plant plant-one">✳</div><div class="plant plant-two">✳</div>
+        <div class="book-stack"><div class="book book-a"><span>THE<br>CREATIVE<br>ACT</span></div><div class="book book-b"><span>little<br>women</span></div><div class="book book-c"><span>THE<br>ALCHEMIST</span></div></div>
+        <div class="art-caption">A world of stories<br>at your fingertips.</div>
+      </div>
+    </section>
+
+    <section class="results-section" id="results-section" aria-live="polite">
+      <div class="section-heading"><div><p class="eyebrow">THE BOOKSHELF</p><h2 id="results-title">A few places to start</h2></div><p class="result-count" id="result-count"></p></div>
+      <div class="books-grid" id="books-grid">
+        <article class="suggestion-card"><span class="suggestion-number">01</span><p>Curious about a classic?</p><button class="suggestion-link" data-search="pride and prejudice">Explore timeless stories <span>↗</span></button></article>
+        <article class="suggestion-card"><span class="suggestion-number">02</span><p>Need a little wonder?</p><button class="suggestion-link" data-search="fantasy fiction">Step into another world <span>↗</span></button></article>
+        <article class="suggestion-card"><span class="suggestion-number">03</span><p>Looking for a new voice?</p><button class="suggestion-link" data-search="award winning novels">Meet your next author <span>↗</span></button></article>
+      </div>
+    </section>
+    <section class="about" id="about"><span class="about-icon">✳</span><p><strong>Good books, found simply.</strong><br>Search the Open Library catalog and follow a story wherever it takes you.</p><a href="https://openlibrary.org/" target="_blank" rel="noreferrer">Powered by Open Library ↗</a></section>
+  </main>
+  <footer><span>goodreadshelf</span><span>A little more reading, a little more wonder.</span></footer>
+</body>
+</html>
